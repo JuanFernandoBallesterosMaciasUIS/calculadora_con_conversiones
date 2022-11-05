@@ -1,17 +1,22 @@
 from tkinter import *
+from tkinter import messagebox, ttk
+import menu
 
-
+#Ventana principal
 ventana = Tk()
 ventana.title("Calculadora")
-ventana.geometry("355x410")
+ventana.geometry("350x410")
+ventana.resizable(0,0)
+
 
 
 #Entrada
-e_texto = Entry(ventana, font = ("Rubik 20"))
-e_texto.grid(row = 0, column = 0, columnspan = 4, padx = 5, pady = 5)
+e_texto = Entry(ventana, font = ("Rubik 20"), borderwidth = 4,justify= 'right')
+e_texto.place(x=0, y=10)
 
 
 #funciones
+
 
 
 def click_boton(valor):
@@ -19,9 +24,10 @@ def click_boton(valor):
     e_texto.insert(i, valor)
     i += 1
 
+
 def borrar():
     e_texto.delete(0, END)
-    i =0
+
 
 def hacer_operacion():
     ecuacion = e_texto.get()
@@ -47,6 +53,8 @@ boton8 = Button(ventana, text = "8", width = 9, height = 3, command= lambda: cli
 boton9 = Button(ventana, text = "9", width = 9, height = 3, command= lambda: click_boton(9))
 boton0 = Button(ventana, text = "0", width = 21, height = 3, command= lambda: click_boton(0))
 
+
+
 boton_borrar = Button(ventana, text = "AC", width = 9, height = 3, command= lambda: borrar())
 boton_parentesis1 = Button(ventana, text = "(", width = 9, height = 3, command= lambda: click_boton("("))
 boton_parentesis2 = Button(ventana, text = ")", width = 9, height = 3, command= lambda: click_boton(")"))
@@ -61,34 +69,38 @@ boton_igual = Button(ventana, text = "=", width = 9, height = 3, command= lambda
 
 #Agregar botones en pantalla
 
+#Menu
+button = ttk.Button(text = "Conversiones", command = menu.menu_conversiones)
+button.place(x=5, y=380)
+
 #Fila 1
-boton_borrar.grid(row = 1, column = 0, padx = 5, pady = 5)
-boton_parentesis1.grid(row = 1, column = 1, padx = 5, pady = 5)
-boton_parentesis2.grid(row = 1, column = 2, padx = 5, pady = 5)
-boton_div.grid(row = 1, column = 3, padx = 5, pady = 5)
+boton_borrar.place(x=9, y=56)
+boton_parentesis1.place(x=97, y=56)
+boton_parentesis2.place(x=182, y=56)
+boton_div.place(x=267, y=56)
 
 #Fila 2
-boton7.grid(row = 2, column = 0, padx = 5, pady = 5)
-boton8.grid(row = 2, column = 1, padx = 5, pady = 5)
-boton9.grid(row = 2, column = 2, padx = 5, pady = 5)
-boton_mult.grid(row = 2, column = 3, padx = 5, pady = 5)
+boton7.place(x=9, y=121)
+boton8.place(x=97, y=121)
+boton9.place(x=182, y=121)
+boton_mult.place(x=267, y=121)
 
 #Fila 3
-boton4.grid(row = 3, column = 0, padx = 5, pady = 5)
-boton5.grid(row = 3, column = 1, padx = 5, pady = 5)
-boton6.grid(row = 3, column = 2, padx = 5, pady = 5)
-boton_suma.grid(row = 3, column = 3, padx = 5, pady = 5)
+boton4.place(x=9, y=186)
+boton5.place(x=97, y=186)
+boton6.place(x=182, y=186)
+boton_suma.place(x=265, y=186)
 
 #Fila 4
-boton1.grid(row = 4, column = 0, padx = 5, pady = 5)
-boton2.grid(row = 4, column = 1, padx = 5, pady = 5)
-boton3.grid(row = 4, column = 2, padx = 5, pady = 5)
-boton_resta.grid(row = 4, column = 3, padx = 5, pady = 5)
+boton1.place(x=9, y=250)
+boton2.place(x=97, y=250)
+boton3.place(x=182, y=250)
+boton_resta.place(x=267, y=250)
 
 #Fila 5
-boton0.grid(row = 5, column = 0, columnspan = 2, padx = 5, pady = 5)
-boton_punto.grid(row = 5, column = 2, padx = 5, pady = 5)
-boton_igual.grid(row = 5, column = 3, padx = 5, pady = 5)
+boton0.place(x=9, y=315)
+boton_punto.place(x=182, y=315)
+boton_igual.place(x=267, y=315)
 
 
 ventana.mainloop()
