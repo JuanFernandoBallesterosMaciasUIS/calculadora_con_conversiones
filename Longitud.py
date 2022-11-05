@@ -5,6 +5,14 @@ def vent_longitud():
     menu.title("Longitud")
     menu.geometry("355x410")
     
+# Frame
+    frame1 = Frame(menu)
+    frame1.config(bg="lightsteelblue3", width = 355, height = 146)
+    frame1.place(x=0, y=0)
+
+    frame2 = Frame(menu)
+    frame2.config(bg="snow", width = 335, height = 125)
+    frame2.place(x=11, y=11)
 
  #Agregar botones en pantalla de longitud 
 # fila 1
@@ -17,7 +25,7 @@ def vent_longitud():
     boton9 = Button(menu, text = "9", width = 9, height = 3,)
     boton9.place(x=187, y=151)
 
-    boton_borrar = Button(menu, text = "AC", width = 8, height = 7,)
+    boton_borrar = Button(menu, text = "AC",bg="sky blue",  width = 8, height = 7,)
     boton_borrar.place(x=272, y=151) 
 
 # fila 2
@@ -39,12 +47,11 @@ def vent_longitud():
 
     boton3 = Button(menu, text = "3", width = 9, height = 3,)
     boton3.place(x=187, y=281)
-
-    boton4 = Button(menu, text = "X", width = 8, height = 7,)
+    
+    boton4 = Button(menu, text = "X",bg="sky blue", width = 8, height = 7,)
     boton4.place(x=272, y=281) 
-  
-# fila 4
 
+# fila 4
     boton0 = Button(menu, text = "0", width = 9, height = 3,)
     boton0.place(x=102, y=345)
 
