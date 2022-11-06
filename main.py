@@ -11,7 +11,7 @@ ventana.resizable(0,0)
 
 
 #Entrada
-e_texto = Entry(ventana, font = ("Rubik 20"), borderwidth = 4,justify= 'right')
+e_texto = Entry(ventana, font = ("Rubik 20"), borderwidth = 4, justify= 'right')
 e_texto.place(x=0, y=10)
 
 

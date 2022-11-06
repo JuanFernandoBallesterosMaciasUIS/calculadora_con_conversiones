@@ -20,7 +20,7 @@ def vent_masa():
     lista_desplegable.place (x = 20, y = 20 )
 
     #lista de opciones
-    opciones = ["Kg","g","mg"]
+    opciones = ["Kg","l","g","mg"]
     lista_desplegable['values'] = opciones
 
     lista_desplegable2 = ttk.Combobox(menu, width = 12)
@@ -28,7 +28,7 @@ def vent_masa():
 
 
     #lista de opciones
-    opciones = ["Kg","g","mg"]
+    opciones = ["Kg","l","g","mg"]
     lista_desplegable2['values'] = opciones
 
     #Entradas 
