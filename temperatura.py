@@ -1,9 +1,13 @@
 from tkinter import *
+from tkinter import ttk
 
 def vent_temperatura():
     menu = Tk()
     menu.title("Temperatura")
     menu.geometry("355x410")
+    
+    
+    
     
     # Frame
     frame1 = Frame(menu)
@@ -14,7 +18,29 @@ def vent_temperatura():
     frame2.config(bg="snow", width = 335, height = 125)
     frame2.place(x=11, y=11)
     
+    # Listas desplegables
+    lista_desplegable = ttk.Combobox(menu, width = 12)
+    lista_desplegable.place (x = 20, y = 20 )
+
     
+    #lista de opciones
+    opciones = ["Cº","Fº","Kº"]
+    lista_desplegable['values'] = opciones
+
+    lista_desplegable2 = ttk.Combobox(menu, width = 12)
+    lista_desplegable2.place (x = 20, y = 75 )
+    
+    opciones = ["Cº","Fº","Kº"]
+    lista_desplegable2['values'] = opciones
+    
+    
+    #Entradas 
+    e_texto = Entry(menu, font = ("Rubik 20"),justify= 'right', width = 8)
+    e_texto.place(x=198, y=14)
+
+    e_texto2 = Entry(menu, font = ("Rubik 20"),justify= 'right', width = 8)
+    e_texto2.place(x=198, y=75)
+
     #Agregar botones en pantalla de longitud 
     # fila 1
     boton7 = Button(menu, text = "7", width = 9, height = 3,)
