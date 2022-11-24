@@ -18,14 +18,24 @@ def vent_masa():
        
     def borrar():
         e_texto.delete(0, END)
+        e_texto2.delete(0, END)
         
     def operar():
         opc1 = lista_desplegable.get()
         opc2 = lista_desplegable2.get()
         
-        if opc1 == "kg" and opc2 == "kg":
-            return 2
-
+        if opc1 == "Kilogramos" and opc2 == "Libras":
+            x = int(e_texto.get())
+            resul = x*2
+            e_texto2.delete(0, END)
+            e_texto2.insert(0,string=str(resul))
+            
+        elif opc1 == "Kilogramos" and opc2 == "Gramos":
+            x = int(e_texto.get())
+            resul = x*2
+            e_texto2.delete(0, END)
+            e_texto2.insert(0,string=str(resul))
+            
     # Frame
     frame1 = Frame(menu)
     frame1.config(bg="lightsteelblue3", width = 355, height = 146)
@@ -40,7 +50,7 @@ def vent_masa():
     lista_desplegable.place (x = 20, y = 20 )
 
     #lista de opciones
-    opciones = ["Kg","l","g","mg"]
+    opciones = ["Kilogramos","Libras","Gramos","Miligramos"]
     lista_desplegable['values'] = opciones
 
     lista_desplegable2 = ttk.Combobox(menu, width = 12)
@@ -48,7 +58,7 @@ def vent_masa():
 
 
     #lista de opciones
-    opciones = ["Kg","l","g","mg"]
+    opciones = ["Kilogramos","Libras","Gramos","Miligramos"]
     lista_desplegable2['values'] = opciones
 
     #Entradas 
@@ -70,7 +80,7 @@ def vent_masa():
     boton9 = Button(menu, text = "9", width = 9, height = 3,command= lambda: click_boton(9))
     boton9.place(x=187, y=151)
 
-    boton_borrar = Button(menu, text = "AC", width = 8, height = 7,bg="sky blue",command= lambda: borrar())
+    boton_borrar = Button(menu, text = "Borrar", width = 8, height = 7,bg="sky blue",command= lambda: borrar())
     boton_borrar.place(x=272, y=151) 
 
     # fila 2
@@ -93,8 +103,8 @@ def vent_masa():
     boton3 = Button(menu, text = "3", width = 9, height = 3,command= lambda: click_boton(3))
     boton3.place(x=187, y=281)
 
-    boton4 = Button(menu, text = "X", width = 8, height = 7,bg="sky blue")
-    boton4.place(x=272, y=281) 
+    boton_ejecutar = Button(menu, text = "Ejecutar", width = 8, height = 7,bg="sky blue", command=operar)
+    boton_ejecutar.place(x=272, y=281) 
 
     # fila 4
 

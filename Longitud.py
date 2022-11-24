@@ -85,5 +85,5 @@ def vent_longitud():
 
     boton1 = Button(menu, text = ".", width = 9, height = 3,)
     boton1.place(x=187, y=345)
-
+    
 #menu.mainloop()
