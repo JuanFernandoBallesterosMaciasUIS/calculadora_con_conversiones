@@ -1,13 +1,64 @@
 from tkinter import *
 from tkinter import ttk
 
+
+i = 0
+
 def vent_temperatura():
     menu = Tk()
     menu.title("Temperatura")
     menu.geometry("355x410")
-    
-    
-    
+
+    def click_boton(valor):
+        global i
+        e_texto.insert(i, valor)
+        i += 1
+       
+    def borrar():
+        e_texto.delete(0, END)
+        e_texto2.delete(0, END)
+        
+    def operar():
+        opc1 = lista_desplegable.get()
+        opc2 = lista_desplegable2.get()
+
+        if opc1 == "Cº" and opc2 == "Kº":
+            x = float(e_texto.get())
+            resul = x + 273.15
+            e_texto2.delete(0, END)
+            e_texto2.insert(0,string=str(resul))
+            
+        elif opc1 == "Cº" and opc2 == "Fº":
+            x = float(e_texto.get())
+            resul = x*9/5 + 32
+            e_texto2.delete(0, END)
+            e_texto2.insert(0,string=str(resul))
+            
+        elif opc1 == "Kº" and opc2 == "Cº":
+            x = float(e_texto.get())
+            resul = x - 273.15
+            e_texto2.delete(0, END)
+            e_texto2.insert(0,string=str(resul))
+            
+            
+        elif opc1 == "Kº" and opc2 == "Fº":
+            x = float(e_texto.get())
+            resul = (x - 273.15) * 9/5 + 32 
+            e_texto2.delete(0, END)
+            e_texto2.insert(0,string=str(resul))
+        
+        elif opc1 == "Fº" and opc2 == "Cº":
+            x = float(e_texto.get())
+            resul = (x - 32) * 5/9 
+            e_texto2.delete(0, END)
+            e_texto2.insert(0,string=str(resul))
+            
+        elif opc1 == "Fº" and opc2 == "Kº":
+            x = float(e_texto.get())
+            resul = (x - 32) * 5/9 + 273.15
+            e_texto2.delete(0, END)
+            e_texto2.insert(0,string=str(resul))
+            
     
     # Frame
     frame1 = Frame(menu)
@@ -43,45 +94,45 @@ def vent_temperatura():
 
     #Agregar botones en pantalla de longitud 
     # fila 1
-    boton7 = Button(menu, text = "7", width = 9, height = 3,)
+    boton7 = Button(menu, text = "7", width = 9, height = 3,command= lambda: click_boton(7))
     boton7.place(x=15, y=151)
     
-    boton8 = Button(menu, text = "8", width = 9, height = 3,)
+    boton8 = Button(menu, text = "8", width = 9, height = 3,command= lambda: click_boton(8))
     boton8.place(x=102, y=151)
     
-    boton9 = Button(menu, text = "9", width = 9, height = 3,)
+    boton9 = Button(menu, text = "9", width = 9, height = 3,command= lambda: click_boton(9))
     boton9.place(x=187, y=151)
     
-    boton_borrar = Button(menu, text = "AC", width = 8, height = 7,bg="sky blue")
+    boton_borrar = Button(menu, text = "Eleminar", width = 8, height = 7,bg="sky blue",command= lambda: borrar())
     boton_borrar.place(x=272, y=151) 
     
     # fila 2
-    boton4 = Button(menu, text = "4", width = 9, height = 3,)
+    boton4 = Button(menu, text = "4", width = 9, height = 3,command= lambda: click_boton(4))
     boton4.place(x=15, y=217)
     
-    boton5 = Button(menu, text = "5", width = 9, height = 3,)
+    boton5 = Button(menu, text = "5", width = 9, height = 3,command= lambda: click_boton(5))
     boton5.place(x=102, y=217)
     
-    boton6 = Button(menu, text = "6", width = 9, height = 3,)
+    boton6 = Button(menu, text = "6", width = 9, height = 3,command= lambda: click_boton(6))
     boton6.place(x=187, y=217)
     
     # fila 3
-    boton1 = Button(menu, text = "1", width = 9, height = 3,)
+    boton1 = Button(menu, text = "1", width = 9, height = 3,command= lambda: click_boton(1))
     boton1.place(x=15, y=281)
     
-    boton2 = Button(menu, text = "2", width = 9, height = 3,)
+    boton2 = Button(menu, text = "2", width = 9, height = 3,command= lambda: click_boton(2))
     boton2.place(x=102, y=281)
     
-    boton3 = Button(menu, text = "3", width = 9, height = 3,)
+    boton3 = Button(menu, text = "3", width = 9, height = 3,command= lambda: click_boton(3))
     boton3.place(x=187, y=281)
     
-    boton4 = Button(menu, text = "X", width = 8, height = 7,bg="sky blue")
-    boton4.place(x=272, y=281) 
+    boton_operar = Button(menu, text = "Ejecutar", width = 8, height = 7,bg="sky blue",command=operar)
+    boton_operar.place(x=272, y=281) 
     
     # fila 4
     
-    boton0 = Button(menu, text = "0", width = 9, height = 3,)
+    boton0 = Button(menu, text = "0", width = 9, height = 3,command= lambda: click_boton(0))
     boton0.place(x=102, y=345)
     
-    boton1 = Button(menu, text = ".", width = 9, height = 3,)
-    boton1.place(x=187, y=345)
+    boton1 = Button(menu, text = ".", width = 9, height = 3,command= lambda: click_boton("."))
+    boton1.place(x=187,y=345)

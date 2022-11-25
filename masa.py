@@ -92,7 +92,7 @@ def vent_masa():
             e_texto2.delete(0, END)
             e_texto2.insert(0,string=str(resul))
             
-        elif opc1 == "Miligramos" and opc2 == "Gramo":
+        elif opc1 == "Miligramos" and opc2 == "Gramos":
             x = float(e_texto.get())
             resul = x*(1/1000)
             e_texto2.delete(0, END)
