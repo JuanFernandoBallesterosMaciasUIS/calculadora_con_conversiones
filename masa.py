@@ -24,17 +24,81 @@ def vent_masa():
         opc1 = lista_desplegable.get()
         opc2 = lista_desplegable2.get()
         
+        
         if opc1 == "Kilogramos" and opc2 == "Libras":
-            x = int(e_texto.get())
+            x = float(e_texto.get())
             resul = x*2
             e_texto2.delete(0, END)
             e_texto2.insert(0,string=str(resul))
             
         elif opc1 == "Kilogramos" and opc2 == "Gramos":
-            x = int(e_texto.get())
-            resul = x*2
+            x = float(e_texto.get())
+            resul = x*1000
             e_texto2.delete(0, END)
             e_texto2.insert(0,string=str(resul))
+            
+        elif opc1 == "Kilogramos" and opc2 == "Miligramos":
+            x = float(e_texto.get())
+            resul = x*1000000
+            e_texto2.delete(0, END)
+            e_texto2.insert(0,string=str(resul))
+            
+            
+        elif opc1 == "Libras" and opc2 == "Kilogramos":
+            x = float(e_texto.get())
+            resul = x*0.5
+            e_texto2.delete(0, END)
+            e_texto2.insert(0,string=str(resul))
+        
+        elif opc1 == "Libras" and opc2 == "Gramos":
+            x = float(e_texto.get())
+            resul = x*500
+            e_texto2.delete(0, END)
+            e_texto2.insert(0,string=str(resul))
+            
+        elif opc1 == "Libras" and opc2 == "Miligramos":
+            x = float(e_texto.get())
+            resul = x*500000
+            e_texto2.delete(0, END)
+            e_texto2.insert(0,string=str(resul))
+            
+        elif opc1 == "Gramos" and opc2 == "Kilogramos":
+            x = float(e_texto.get())
+            resul = x*0.001
+            e_texto2.delete(0, END)
+            e_texto2.insert(0,string=str(resul))
+            
+        elif opc1 == "Gramos" and opc2 == "Libras":
+            x = float(e_texto.get())
+            resul = x*(1/500)
+            e_texto2.delete(0, END)
+            e_texto2.insert(0,string=str(resul))
+            
+        elif opc1 == "Gramos" and opc2 == "Miligramos":
+            x = float(e_texto.get())
+            resul = x*1000
+            e_texto2.delete(0, END)
+            e_texto2.insert(0,string=str(resul))
+            
+        elif opc1 == "Miligramos" and opc2 == "Kilogramos":
+            x = float(e_texto.get())
+            resul = x*(1/1000000)
+            e_texto2.delete(0, END)
+            e_texto2.insert(0,string=str(resul))
+            
+        elif opc1 == "Miligramos" and opc2 == "Libras":
+            x = float(e_texto.get())
+            resul = x*(1/500)
+            e_texto2.delete(0, END)
+            e_texto2.insert(0,string=str(resul))
+            
+        elif opc1 == "Miligramos" and opc2 == "Gramo":
+            x = float(e_texto.get())
+            resul = x*(1/1000)
+            e_texto2.delete(0, END)
+            e_texto2.insert(0,string=str(resul))
+            
+        
             
     # Frame
     frame1 = Frame(menu)
