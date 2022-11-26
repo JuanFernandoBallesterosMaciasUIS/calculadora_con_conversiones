@@ -6,25 +6,29 @@ import temperatura
 import volumen
 
 def menu_conversiones():
+    
     menu = Tk()
     menu.title("Conversiones")
-    menu.geometry("250x200")
+    menu.geometry("300x260")
     
-    
+    menu.config(bg="black")
+
+  
     #Menu
-    button_long = ttk.Button(menu,text = "Longitud", command = Longitud.vent_longitud)
-    button_long.place(x=5, y=30)
+    button_long = Button(menu,text = "Longitud", command = Longitud.vent_longitud,font = ("Bahnschrift Condensed",15))
+    button_long.place(x=100, y=50, width = 97, height = 40)
     
-    button_long = ttk.Button(menu,text = "Masa", command = masa.vent_masa)
-    button_long.place(x=5, y=60)
+    button_long = Button(menu,text = "Masa", command = masa.vent_masa,font = ("Bahnschrift Condensed",15))
+    button_long.place(x=100, y=100, width = 97, height = 40)
     
-    button_long = ttk.Button(menu,text = "Temperatura", command = temperatura.vent_temperatura)
-    button_long.place(x=5, y=90)
+    button_long = Button(menu,text = "Temperatura", command = temperatura.vent_temperatura,font = ("Bahnschrift Condensed",15))
+    button_long.place(x=100, y=150, width = 97, height = 40)
     
-    button_long = ttk.Button(menu,text = "Volumen", command = volumen.vent_volumen)
-    button_long.place(x=5, y=120)
+    button_long = Button(menu,text = "Volumen", command = volumen.vent_volumen,font = ("Bahnschrift Condensed",15))
+    button_long.place(x=100, y=200, width = 97, height = 40)
     
-    label = Label(menu, text="Selecciona un boton")
-    label.grid(row = 0, column = 0, padx = 10, pady = 10)
-    
+    label = Label(menu, text="Selecciona una magnitud",font = ("Bahnschrift Condensed",15),fg="white",bg="black")
+    label.grid(row = 0, column = 0, padx = 60, pady = 10)
+
+
     menu.mainloop

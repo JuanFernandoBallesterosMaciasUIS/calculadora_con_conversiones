@@ -6,6 +6,8 @@ i = 0
 
 def vent_temperatura():
     menu = Tk()
+    menu.iconbitmap('icono/logo21.ico')
+    
     menu.title("Temperatura")
     menu.geometry("355x410")
 
@@ -94,45 +96,45 @@ def vent_temperatura():
 
     #Agregar botones en pantalla de longitud 
     # fila 1
-    boton7 = Button(menu, text = "7", width = 9, height = 3,command= lambda: click_boton(7))
-    boton7.place(x=15, y=151)
+    boton7 = Button(menu, text = "7",command= lambda: click_boton(7),font = ("Bahnschrift Condensed",20))
+    boton7.place(x=15, y=151,width = 73, height = 56)
     
-    boton8 = Button(menu, text = "8", width = 9, height = 3,command= lambda: click_boton(8))
-    boton8.place(x=102, y=151)
+    boton8 = Button(menu, text = "8",command= lambda: click_boton(8),font = ("Bahnschrift Condensed",20))
+    boton8.place(x=102, y=151,width = 73, height = 56)
     
-    boton9 = Button(menu, text = "9", width = 9, height = 3,command= lambda: click_boton(9))
-    boton9.place(x=187, y=151)
+    boton9 = Button(menu, text = "9",command= lambda: click_boton(9),font = ("Bahnschrift Condensed",20))
+    boton9.place(x=187, y=151,width = 73, height = 56)
     
-    boton_borrar = Button(menu, text = "Eleminar", width = 8, height = 7,bg="sky blue",command= lambda: borrar())
-    boton_borrar.place(x=272, y=151) 
+    boton_borrar = Button(menu, text = "Borrar",bg="sky blue",command= lambda: borrar(),font = ("Bahnschrift Condensed",15))
+    boton_borrar.place(x=272, y=151,width = 73, height = 110) 
     
     # fila 2
-    boton4 = Button(menu, text = "4", width = 9, height = 3,command= lambda: click_boton(4))
-    boton4.place(x=15, y=217)
+    boton4 = Button(menu, text = "4",command= lambda: click_boton(4),font = ("Bahnschrift Condensed",20),bg="sky blue")
+    boton4.place(x=15, y=217,width = 73, height = 56)
     
-    boton5 = Button(menu, text = "5", width = 9, height = 3,command= lambda: click_boton(5))
-    boton5.place(x=102, y=217)
+    boton5 = Button(menu, text = "5",command= lambda: click_boton(5),font = ("Bahnschrift Condensed",20))
+    boton5.place(x=102, y=217,width = 73, height = 56)
     
-    boton6 = Button(menu, text = "6", width = 9, height = 3,command= lambda: click_boton(6))
-    boton6.place(x=187, y=217)
+    boton6 = Button(menu, text = "6",command= lambda: click_boton(6),font = ("Bahnschrift Condensed",20))
+    boton6.place(x=187, y=217,width = 73, height = 56)
     
     # fila 3
-    boton1 = Button(menu, text = "1", width = 9, height = 3,command= lambda: click_boton(1))
-    boton1.place(x=15, y=281)
+    boton1 = Button(menu, text = "1",command= lambda: click_boton(1),font = ("Bahnschrift Condensed",20))
+    boton1.place(x=15, y=281,width = 73, height = 56)
     
-    boton2 = Button(menu, text = "2", width = 9, height = 3,command= lambda: click_boton(2))
-    boton2.place(x=102, y=281)
+    boton2 = Button(menu, text = "2",command= lambda: click_boton(2),font = ("Bahnschrift Condensed",20))
+    boton2.place(x=102, y=281,width = 73, height = 56)
     
-    boton3 = Button(menu, text = "3", width = 9, height = 3,command= lambda: click_boton(3))
-    boton3.place(x=187, y=281)
+    boton3 = Button(menu, text = "3",command= lambda: click_boton(3),font = ("Bahnschrift Condensed",20))
+    boton3.place(x=187, y=281,width = 73, height = 56)
     
-    boton_operar = Button(menu, text = "Ejecutar", width = 8, height = 7,bg="sky blue",command=operar)
-    boton_operar.place(x=272, y=281) 
+    boton_operar = Button(menu, text = "Ejecutar",bg="sky blue",command=operar,font = ("Bahnschrift Condensed",15))
+    boton_operar.place(x=272, y=281,width = 73, height = 120) 
     
     # fila 4
     
-    boton0 = Button(menu, text = "0", width = 9, height = 3,command= lambda: click_boton(0))
-    boton0.place(x=102, y=345)
+    boton0 = Button(menu, text = "0",command= lambda: click_boton(0),font = ("Bahnschrift Condensed",20))
+    boton0.place(x=102, y=345,width = 73, height = 56)
     
-    boton1 = Button(menu, text = ".", width = 9, height = 3,command= lambda: click_boton("."))
-    boton1.place(x=187,y=345)
+    boton1 = Button(menu, text = ".",command= lambda: click_boton("."),font = ("Bahnschrift Condensed",20))
+    boton1.place(x=187, y=345,width = 73,height=56)
