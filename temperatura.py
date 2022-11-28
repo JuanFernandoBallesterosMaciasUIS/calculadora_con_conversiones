@@ -125,7 +125,7 @@ def vent_temperatura():
     boton9.place(x=187, y=151,width = 73, height = 56)
     
     boton_borrar = Button(menu, text = "Borrar",command= lambda: borrar(),bg="#4d2405", fg="#ffffff",font = ("Bahnschrift Condensed",18))
-    boton_borrar.place(x=272, y=151,width = 73, height = 110) 
+    boton_borrar.place(x=272, y=151,width = 73, height = 121)
     
     # fila 2
     boton4 = Button(menu, text = "4",command= lambda: click_boton(4),bg="#454545", fg="#ffffff",font = ("Bahnschrift Condensed",20))
