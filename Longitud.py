@@ -8,8 +8,25 @@ def vent_longitud():
     menu.iconbitmap('icono/logo21.ico')
     
     menu.title("Longitud")
-    menu.geometry("355x410")
+    #menu.geometry("355x410")
     menu.config(bg="#080808")
+    menu.resizable(0,0)
+    
+    #  Obtenemos el largo y  ancho de la pantalla
+    wtotal = menu.winfo_screenwidth()
+    htotal = menu.winfo_screenheight()
+    #  Guardamos el largo y alto de la ventana
+    wventana = 355
+    hventana = 410
+
+    #  Aplicamos la siguiente formula para calcular donde debería posicionarse
+    pwidth = round(wtotal/2-wventana/2)
+    pheight = round(htotal/2-hventana/2)
+
+    #  Se lo aplicamos a la geometría de la ventana
+    menu.geometry(str(wventana)+"x"+str(hventana)+"+"+str(pwidth)+"+"+str(pheight))
+
+    
     
 
     def click_boton(valor):
@@ -167,7 +184,7 @@ def vent_longitud():
     
 
     frame2 = Frame(menu)
-    frame2.config(bg="snow", width = 335, height = 125)
+    frame2.config(bg="lightsteelblue3", width = 335, height = 125)
     frame2.place(x=11, y=11)
     frame2.config(bg="#080808")
     
@@ -236,7 +253,7 @@ def vent_longitud():
     # fila 4
     
     boton0 = Button(menu, text = "0",command= lambda: click_boton(0),bg="#454545", fg="#ffffff",font = ("Bahnschrift Condensed",20))
-    boton0.place(x=102, y=345,width = 73, height = 56)
+    boton0.place(x=15, y=345, width = 160, height = 56)
     
     boton1 = Button(menu, text = ".",command= lambda: click_boton("."),bg="#454545", fg="#ffffff",font = ("Bahnschrift Condensed",20))
     boton1.place(x=187, y=345,width = 73,height=56)

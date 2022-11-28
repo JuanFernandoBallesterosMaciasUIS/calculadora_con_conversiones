@@ -6,9 +6,23 @@ import menu
 ventana = Tk()
 ventana.iconbitmap('icono/logo21.ico')
 ventana.title("Calculadora")
-ventana.geometry("350x425")
+#ventana.geometry("350x425")
 ventana.resizable(0,0)
 ventana.config(bg="#080808")
+
+#  Obtenemos el largo y  ancho de la pantalla
+wtotal = ventana.winfo_screenwidth()
+htotal = ventana.winfo_screenheight()
+#  Guardamos el largo y alto de la ventana
+wventana = 350
+hventana = 425
+
+#  Aplicamos la siguiente formula para calcular donde debería posicionarse
+pwidth = round(wtotal/2-wventana/2)
+pheight = round(htotal/2-hventana/2)
+
+#  Se lo aplicamos a la geometría de la ventana
+ventana.geometry(str(wventana)+"x"+str(hventana)+"+"+str(pwidth)+"+"+str(pheight))
 
 
 
