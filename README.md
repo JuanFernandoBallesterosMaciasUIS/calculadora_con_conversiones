@@ -2,4 +2,4 @@
 
 # Programa funcionando
 
-![Diagrama de flujo](captura4.png "Captura")
+![Diagrama de flujo](captura5.png "Captura")
