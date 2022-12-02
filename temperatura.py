@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import ttk
-
+from tkinter import messagebox
 
 i = 0
 
@@ -76,6 +76,8 @@ def vent_temperatura():
             resul = (x - 32) * 5/9 + 273.15
             e_texto2.delete(0, END)
             e_texto2.insert(0,string=str(resul))
+        else:
+            messagebox.showinfo("Error", "Selecciona unidades diferentes")
             
     
     # Frame

@@ -30,7 +30,6 @@ ventana.geometry(str(wventana)+"x"+str(hventana)+"+"+str(pwidth)+"+"+str(pheight
 e_texto = Entry(ventana, font = ("Rubik 20"), borderwidth = 4, justify= 'right',bg="#080808",fg="#ffffff")
 e_texto.place(x=0, y=0,width = 350, height = 50)
 
-
 #funciones
 
 

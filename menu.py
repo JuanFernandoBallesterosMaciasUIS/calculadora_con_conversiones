@@ -4,6 +4,7 @@ import Longitud
 import masa
 import temperatura
 import volumen
+import Tiempo
 
 def menu_conversiones():
     
@@ -19,7 +20,7 @@ def menu_conversiones():
     htotal = menu.winfo_screenheight()
     #  Guardamos el largo y alto de la ventana
     wventana = 300
-    hventana = 260
+    hventana = 300
 
     #  Aplicamos la siguiente formula para calcular donde debería posicionarse
     pwidth = round(wtotal/2-wventana/2)
@@ -43,6 +44,9 @@ def menu_conversiones():
     
     button_long = Button(menu,text = "Volumen", command = volumen.vent_volumen,font = ("Bahnschrift Condensed",15))
     button_long.place(x=100, y=200, width = 97, height = 40)
+    
+    button_long = Button(menu,text = "Tiempo", command = Tiempo.vent_tiempo,font = ("Bahnschrift Condensed",15))
+    button_long.place(x=100, y=250, width = 97, height = 40)
     
     label = Label(menu, text="Selecciona una magnitud",font = ("Bahnschrift Condensed",15),fg="white",bg="black")
     label.grid(row = 0, column = 0, padx = 60, pady = 10)

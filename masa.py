@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import ttk
-
+from tkinter import messagebox
 
 i = 0
 
@@ -114,6 +114,8 @@ def vent_masa():
             resul = x*(1/1000)
             e_texto2.delete(0, END)
             e_texto2.insert(0,string=str(resul))
+        else:
+            messagebox.showinfo("Error", "Selecciona unidades diferentes")
             
         
             
